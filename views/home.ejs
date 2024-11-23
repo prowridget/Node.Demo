@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+        }
+        .navbar {
+            background-color: #007BFF;
+        }
+        .navbar .nav-link {
+            color: white;
+        }
+        .navbar .nav-link:hover {
+            color: #ffcc00;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .nav-item {
+            margin: 0 10px;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Trang Web</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Đăng Nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Vehicle">Tra Cứu Biển Số</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Chào Mừng Bạn Đến Với Trang Chủ</h1>
+        <p>Khám Phá Các Dịch Vụ Của Chúng Tôi</p>
+        <a href="/login" class="btn btn-light btn-lg">Đăng Nhập Ngay</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Đăng nhập">
+                    <div class="card-body">
+                        <h5 class="card-title">Đăng Nhập</h5>
+                        <p class="card-text">Truy cập vào tài khoản của bạn để sử dụng dịch vụ của chúng tôi.</p>
+                        <a href="/login" class="btn btn-primary">Đăng Nhập</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Tra cứu biển số">
+                    <div class="card-body">
+                        <h5 class="card-title">Tra Cứu Biển Số</h5>
+                        <p class="card-text">Tìm kiếm thông tin biển số xe của các tỉnh thành trên toàn quốc.</p>
+                        <a href="/Vehicle" class="btn btn-primary">Tra Cứu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Trang Web. <a href="#">Điều Khoản Sử Dụng</a> | <a href="#">Chính Sách Bảo Mật</a></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
