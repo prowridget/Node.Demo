@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Biển Số Xe</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-lookup {
+            background-color: #007bff;
+            color: white;
+            width: 100%;
+        }
+        .btn-lookup:hover {
+            background-color: #0056b3;
+        }
+        .select2-container {
+            width: 100% !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Tra Cứu Biển Số Xe</h1>
+        <form action="/Vehicle" method="get">
+            <div class="form-group">
+                <label for="city">Chọn Thành Phố</label>
+                <select id="city" name="city" class="form-control" required>
+                    <option value="" disabled selected>Chọn thành phố</option>
+                    <% cities.forEach(function(city) { %>
+                        <option value="<%= city.city %>" <%= (selectedCity === city.city) ? 'selected' : '' %>><%= city.city %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-lookup">Tra Cứu</button>
+        </form>
+
+        <% if (plates) { %>
+            <div class="mt-4">
+                <h2>Biển Số Xe: <%= plates %></h2>
+            </div>
+        <% } %>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#city').select2({
+                placeholder: "Chọn thành phố",
+                allowClear: true,
+                width: '100%'
+            });
+        });
+    </script>
+</body>
+</html>
